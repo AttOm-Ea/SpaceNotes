@@ -11,7 +11,7 @@ export default function App() {
   const [author, setAuthor] = useState("Loader...");
   const [call, setCall] = useState(true);
   const [oldNumber, setOldNumber] = useState(0)
-  const [newBg, setNewBg] = useState("bg1");
+  const [newBg, setNewBg] = useState("bg4");
   const [numBg, setNumBg] = useState(1);
   
   const positionRandom = () => {
