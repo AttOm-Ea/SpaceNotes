@@ -1,0 +1,171 @@
+:root {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: content-box;
+}
+
+body{
+  margin: 0!important;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) { 
+  body{
+    font-size: 2.9rem;
+  }
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../public/Img/backG2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.screenSaver{
+  width: 100%;
+  height: 100%;  
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.367) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.147)), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.234) 30%, rgba(0,0,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.206) 30%, rgba(0,0,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.18) 30%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.168) 30%, rgba(0,0,0,1) 89%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+}
+
+@media (min-width: 1024px) { 
+  .App{
+    background-image: url(../public/Img/backG1.jpg);
+  }
+  .screenSaver{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.168) 5%, rgba(0,0,0,1) 110%);
+  }
+}
+
+.contentNote{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.note{
+  text-align: center;
+  width: 90%;
+  max-height: 85%;
+  padding: 2.5rem .5rem;
+  border-radius: 2rem;
+  color: white;
+  transition: all .5s ease-in-out;
+  overflow: scroll;
+}
+
+.bg1{
+  background-color: rgba(105, 15, 15, 0.427);
+  transition: all .5s ease-in-out;
+}
+
+.bg2{
+  background-color: rgba(104, 105, 15, 0.427);
+  transition: all .5s ease-in-out;
+}
+
+.bg3{
+  background-color: rgba(18, 15, 105, 0.427);
+  transition: all .5s ease-in-out;
+}
+
+.bg4{
+  background-color: rgba(15, 105, 38, 0.427);
+  transition: all .5s ease-in-out;
+}
+
+@media (min-width: 1024px) { 
+  .note{
+      max-height: 65%;
+  }
+}
+.contentRocket{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rocketBtn{
+  transform: rotate(90deg);
+  width: 35%;
+  height: 150%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.rocketBtn:active {
+  filter: blur(4px);
+}
+
+.rocketMovement {
+  background-image: url(../public/Img/Cohete.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: all 1s;
+  animation:   takeOff 4s infinite 4s alternate linear;
+}
+
+.rocketMovement:hover{
+  width: 110%;
+  transform: rotate(-15deg);
+  transition: all 2s;
+}
+
+@media (min-width: 1024px) { 
+  .rocketBtn{
+    width: 9%;
+    height: 180%;
+  }
+  .rocketMovement{
+    background-size: 160%;
+    width: 105%;
+  }
+  .rocketMovement:hover{
+    height: 82%;
+    margin-left: -3rem;
+    transition: all 2s;
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes takeOff {
+  0%{
+    top: 0;
+    filter: blur(0);
+  }
+  10%{
+    top: .5rem;
+    filter: blur(4px);
+  }
+  20%{
+    top: -.5rem;
+    filter: blur(4px);
+  }
+  30%{
+    top: 0;
+    filter: blur(0);
+  }
+  100%{
+    top: 0;
+    filter: blur(0);
+  }
+}
