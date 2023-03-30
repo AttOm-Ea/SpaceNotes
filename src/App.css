@@ -63,7 +63,7 @@ body{
   border-radius: 2rem;
   color: white;
   transition: all .5s ease-in-out;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .bg1{
@@ -92,7 +92,7 @@ body{
   }
 }
 .contentRocket{
-  height: 20%;
+  height: 19%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -125,9 +125,10 @@ body{
 }
 
 .rocketMovement:hover{
-  width: 110%;
+  width: 90%;
   transform: rotate(-15deg);
   transition: all 2s;
+  height: 50%;
 }
 
 @media (min-width: 1024px) { 
